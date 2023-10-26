@@ -1,0 +1,7 @@
+import org.apache.spark.sql.SparkSession
+val spark = SparkSession.builder.getOrCreate()
+spark.sql("CREATE DATABASE Thog")
+spark.sql("CREATE TABLE Nhom10(MSSV String, Ten string, Tuoi int)")
+spark.sql("insert into Nhom10 (MSSV,Ten,Tuoi) values ('1050080006','Ly Cuong',20),('1050080033','Nguyen Danh Thai',20),('1050080035','Le Tan Thong',22)")
+spark.sql("DELETE FROM table_name WHERE condition")
+spark.sql("SELECT * FROM my_table").show()
